@@ -169,7 +169,7 @@ function refreshGameBanner() {
     return;
   }
   ui.setBannerReserved(true);
-  ads.showBanner({});
+  ads.showBanner({ width: Math.min(window.innerWidth || 360, 680) });
 }
 
 function hideGameBanner() {
@@ -728,7 +728,7 @@ async function refreshStoreShop() {
 
   if (ads.bannerSupported && !store.hasRemoveAds) {
     ui.setBannerReserved(true);
-    const shown = await ads.showBanner({});
+    const shown = await ads.showBanner({ width: Math.min(window.innerWidth || 360, 680) });
     if (!shown) ui.setBannerReserved(false);
     return;
   }

@@ -1975,16 +1975,19 @@ svg.sprite {
 /* Demo build: simulated banner strip so the layout can be reviewed in a browser. */
 .demo-banner {
   position: fixed;
-  left: 0;
-  right: 0;
+  left: 50%;
   bottom: 0;
+  transform: translateX(-50%);
+  width: min(100%, 680px);
   height: 58px;
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 0 14px;
   background: linear-gradient(180deg, #122a5e, #0b1c42);
-  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-bottom: none;
+  border-radius: 14px 14px 0 0;
   z-index: 40;
   color: #dbe9ff;
 }
